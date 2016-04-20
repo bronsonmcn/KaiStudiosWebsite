@@ -457,3 +457,24 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+#twitchStream {
+	max-width: 70%;
+	margin: auto;
+}
+
+.innerTwitchStream {
+  position: relative;
+  height: 0;
+  overflow: hidden; 
+  padding-bottom: 56.25%;
+}
+
+
+.innerTwitchStream iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
