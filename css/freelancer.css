@@ -345,12 +345,12 @@ footer h3 {
 }
 
 footer .footer-above {
-    padding-top: 50px;
+	padding-top 0px;
     background-color: #29599A;
 }
 
 footer .footer-col {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 footer .footer-below {
