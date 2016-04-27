@@ -67,11 +67,11 @@ hr.star-light:after {
 }
 
 hr.star-primary {
-    border-color: #29599A;
+    border-color: #091C38;
 }
 
 hr.star-primary:after {
-    color: #29599A;
+    color: #091C38;
     background-color: #fff;
 }
 
@@ -150,8 +150,7 @@ header .intro-text .skills {
 .navbar {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700
-	
+    font-weight: 700;
 }
 
 .navbar a:focus {
@@ -166,10 +165,22 @@ header .intro-text .skills {
     outline: 0;
 }
 
-.navbar-default,
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #d8d8d8;
+    background: none;
+}
+
+.navbar-default{
+    border: 0;
+    background-image: url("../img/default_background.png");
+}
+
 .navbar-inverse {
     border: 0;
-	background: #295992;
+	background: none;
+}
+.page-scroll active {
+		background: none;
 }
 
 section {
@@ -183,7 +194,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #29599A;
+    background-image: url("../img/default_background.png");
 }
 
 section.success a,
@@ -276,8 +287,13 @@ section.success a.active {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #29599A;
+    color: #091C38;
     background: #fff;
+}
+
+.btn-success {
+	background-color: #091C38;
+	border-color: #091C38;
 }
 
 .floating-label-form-group {
@@ -329,7 +345,7 @@ section.success a.active {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #29599A;
+    color: #091C38;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -346,7 +362,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #29599A;
+    background-image: url("../img/default_background.png");
 }
 
 footer .footer-col {
@@ -355,7 +371,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #29599A;
+    background-image: url("../img/default_background.png");
 }
 
 .btn-social {
@@ -479,4 +495,12 @@ footer .footer-below {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#stream {
+	color: #091C38;
+}
+
+#contact {
+	color: #091C38;
 }
