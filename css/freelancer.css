@@ -362,7 +362,9 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-image: url("../img/default_background.png");
+	padding-bottom: 10px;
+    /*background-image: url("../img/default_background.png");*/
+	background: none;
 }
 
 footer .footer-col {
@@ -371,7 +373,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-image: url("../img/default_background.png");
+    /*background-image: url("../img/default_background.png");*/
 }
 
 .btn-social {
@@ -497,10 +499,38 @@ footer .footer-below {
   height: 100%;
 }
 
-#stream {
+#broadcasts {
+	color: #091C38;
+}
+#about {
 	color: #091C38;
 }
 
 #contact {
-	color: #091C38;
+	color: #fff;
+	background: none;
+}
+
+#contact-us {
+	background-color: white;
+	border: 0px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#contact-us form .row:first-child .floating-label-form-group {
+	border: none;
+}
+
+#aboutKai {
+	width: 100%;
+}
+
+#aboutKai a{
+	color: #29599a;
+}
+
+#shareFooterBackground {
+    background-image: url("../img/default_background.png");	
 }
