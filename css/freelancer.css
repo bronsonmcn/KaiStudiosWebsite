@@ -63,7 +63,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-image: url("img/default_background.png");
+    background-image: url("../img/default_background.png");
 }
 
 hr.star-primary {
@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background-image: url("img/default_background.png");
+    background-image: url("../img/default_background.png");
 }
 
 header .container {
