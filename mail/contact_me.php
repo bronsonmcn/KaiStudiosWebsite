@@ -1,5 +1,4 @@
-<?php
-// Check for empty fields
+<?php 
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['phone']) 		||
@@ -9,18 +8,38 @@ if(empty($_POST['name'])  		||
 	echo "No arguments Provided!";
 	return false;
    }
-	
+
+require_once "Mail.php";  
+
 $name = $_POST['name'];
-$email_address = $_POST['email'];
+$person = $_POST['email'];
 $phone = $_POST['phone'];
-$message = $_POST['message'];
-	
-// Create the email and send the message
-$to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+$from = "$name <noreply@kaistudios.nz>"; 
+$to = "Admin <admin@kaistudios.nz>"; 
+$subject = "Website Contact Form:  $name";  
+$message = $_POST['message']; 
+$body = "Name: $name \r\nEmail Address: $person \r\nPhone Number: $phone \r\n\r\n$message";
+$host = "ssl://smtp.zoho.com"; 
+$port = "465";
+$username = "noreply@kaistudios.nz"; 
+$password = "kaistudiosmail";  
+
+$headers = array (
+	'From' => $from, 
+	'To' => $email_address, 
+	'Subject' => $subject, 
+	'Reply-To' => $person);
+$smtp = Mail::factory('smtp',  
+	array ('host' => $host, 
+		'port' => $port,
+		'auth' => true,  
+		'username' => $username,  
+		'password' => $password));  
+$mail = $smtp->send($to, $headers, $body);  
+   
+if (PEAR::isError($mail)) {  
+	echo("<p>" . $mail->getMessage() . "</p>");  
+} 
+else {   echo("<p>Message successfully sent!</p>");  
+} 
 ?>

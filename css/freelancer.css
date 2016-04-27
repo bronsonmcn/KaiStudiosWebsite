@@ -296,6 +296,12 @@ section.success a.active {
 	border-color: #091C38;
 }
 
+.btn, .btn-success, .btn-lg, .btn:active, .btn:focus, .btn:active:focus {
+	background-color: #091C38;
+	border-color: #091C38;
+}
+
+
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
@@ -391,6 +397,7 @@ footer .footer-below {
 .btn:active,
 .btn.active {
     outline: 0;
+	background-color: #091C38;	
 }
 
 .scroll-top {
@@ -517,11 +524,14 @@ footer .footer-below {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
+	padding: 5px 30px 11px 25px;
 }
 
 #contact-us form .row:first-child .floating-label-form-group {
 	border: none;
 }
+
+
 
 #aboutKai {
 	width: 100%;
@@ -533,4 +543,8 @@ footer .footer-below {
 
 #shareFooterBackground {
     background-image: url("../img/default_background.png");	
+}
+
+.alert, .alert-success {
+	background: #091C38;
 }
