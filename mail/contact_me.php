@@ -1,7 +1,7 @@
 <?php 
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
+   empty($_POST['subject']) 		||
    empty($_POST['message'])	||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
@@ -13,12 +13,12 @@ require_once "Mail.php";
 
 $name = $_POST['name'];
 $person = $_POST['email'];
-$phone = $_POST['phone'];
+$subject = $_POST['subject'];
 $from = "$name <noreply@kaistudios.nz>"; 
 $to = "Admin <admin@kaistudios.nz>"; 
-$subject = "Website Contact Form:  $name";  
+$mailSubject = "Website Contact Form: $name - $subject";  
 $message = $_POST['message']; 
-$body = "Name: $name \r\nEmail Address: $person \r\nPhone Number: $phone \r\n\r\n$message";
+$body = "Name: $name \r\nEmail Address: $person \r\nSubject: $subject \r\n\r\n$message";
 $host = "ssl://smtp.zoho.com"; 
 $port = "465";
 $username = "noreply@kaistudios.nz"; 
@@ -27,7 +27,7 @@ $password = "kaistudiosmail";
 $headers = array (
 	'From' => $from, 
 	'To' => $email_address, 
-	'Subject' => $subject, 
+	'Subject' => $mailSubject, 
 	'Reply-To' => $person);
 $smtp = Mail::factory('smtp',  
 	array ('host' => $host, 
