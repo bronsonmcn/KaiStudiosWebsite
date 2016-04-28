@@ -69,11 +69,13 @@
             $form.addClass("error");
             if ($.isFunction(settings.options.submitError)) {
               settings.options.submitError($form, e, $inputs.jqBootstrapValidation("collectErrors", true));
+				document.getElementById("contactemailbutton").innerHTML = 'Send';
             }
           } else {
             $form.removeClass("error");
             if ($.isFunction(settings.options.submitSuccess)) {
               settings.options.submitSuccess($form, e);
+			  document.getElementById('contactemailbutton').innerHTML = 'Sending...';
             }
           }
         });
