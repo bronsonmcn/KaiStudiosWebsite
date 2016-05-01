@@ -24,8 +24,8 @@
 	
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,9 +70,12 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#stream">Stream</a>
+                        <a href="#broadcasts">Broadcasts</a>
                     </li>
                     <li class="page-scroll">
+                        <a href="#tournament">Tournament</a>
+                    </li>
+					<li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
@@ -102,10 +105,10 @@
     </header>
 
 	
-	<section id="stream">
+	<section id="broadcasts">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>Stream</h2>
+				<h2>Broadcasts</h2>
 				<hr class="star-primary">
 				<div id="twitchStream">
 					<div class="innerTwitchStream">
@@ -189,21 +192,41 @@
         </div>
     </section>
 -->
-    <!-- About Section -->
-    <section class="success" id="about">
+
+    <!-- Tournament Section -->
+    <section class="success" id="tournament">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Tournament</h2>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Kai Studios is a New Zealand based casting organisation which specialises in the game Dota 2.</p>
+                <div id="aboutKai" class="col-lg-4">
+                    <p>Coming later this month is the inaugural edition of the Kai Studios Cup, a one-day single-elimination bracket to see who takes home the bragging rights and the cash.</p>
                 </div>
-                <div class="col-lg-4">
-                    <p>Enter text</p>
+                <!--<div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a
+                </div>>-->
+            </div>
+        </div>
+    </section>	
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div id="aboutKai" class="col-lg-4">
+                    <p>Kai Studios is a New Zealand based casting organisation focussed on providing a professional, polished product maximising the viewer's experience. Founded by Zac Neill in 2016, Kai Studios arose out of a need to both grow the scene and to create a sports-broadcast feel to all aspects of the production process. While the base will always be in Dota 2, Kai Studios is open to any and all esports. For any casting or business enquiries please contact <a href="mailto:admin@kaistudios.nz">admin@kaistudios.nz</a>.</p>
                 </div>
                 <!--<div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
@@ -214,17 +237,19 @@
         </div>
     </section>
 
+	
+	<div id="shareFooterBackground">
     <!-- Contact Section -->
-    <section id="contact">
+    <section class="success" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Contact Us</h2>
-                    <hr class="star-primary">
+                    <hr class="star-light">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2" id="contact-us">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                     <form name="sentMessage" id="contactForm" novalidate>
@@ -244,8 +269,8 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <label>Subject</label>
+                                <input type="text" class="form-control" placeholder="Subject" id="subject" required data-validation-required-message="Please enter a subject.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -260,7 +285,8 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                <button id="contactemailbutton" type="submit" class="btn btn-success btn-lg">Send</button>
+
                             </div>
                         </div>
                     </form>
@@ -275,29 +301,34 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
+                        <h3></h3>
+                        <p></p>
                     </div>
                     <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://facebook.com/KaiStudiosNZ" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="www.facebook.com/KaiStudios" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/KaiStudiosNZ" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="https://twitter.com/ridehunterdota" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
                             <li>
                                 <a href="http://twitch.tv/KaiStudios" class="btn-social btn-outline"><i class="fa fa-fw fa-twitch"></i></a>
                             </li>                            
 							<li>
-                                <a href="http://youtube.com/KaiStudiosNZ" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube-play"></i></a>
+                                <a href="http://twitch.tv/KaiStudios" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube-play"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-below">
+        
+        <!--<div class="footer-below">-->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -305,9 +336,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
+		</div>
     </footer>
 
+	</div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visible-sm">
         <a class="btn btn-primary" href="#page-top">
@@ -500,8 +533,8 @@
                 </div>
             </div>
         </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
     </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -546,7 +579,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
