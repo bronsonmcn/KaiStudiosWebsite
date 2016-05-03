@@ -63,7 +63,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-image: url("../img/default_background4K.png");
+    background-image: url("../img/default_background4K-min.png");
 }
 
 hr.star-primary {
@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background-image: url("../img/default_background4K.png");
+    background-image: url("../img/default_background4K-min.png");
 }
 
 header .container {
@@ -172,7 +172,7 @@ header .intro-text .skills {
 
 .navbar-default{
     border: 0;
-    background-image: url("../img/default_background4K.png");
+    background-image: url("../img/default_background4K-min.png");
 }
 
 .navbar-inverse {
@@ -194,7 +194,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background-image: url("../img/default_background4K.png");
+    background-image: url("../img/default_background4K-min.png");
 }
 
 section.success a,
@@ -542,7 +542,7 @@ footer .footer-below {
 }
 
 #shareFooterBackground {
-    background-image: url("../img/default_background4K.png");	
+    background-image: url("../img/default_background4K-min.png");	
 }
 
 .alert, .alert-success {
